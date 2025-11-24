@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+    </nav>
+
+    <h2>Đăng ký người dùng</h2>
+
+    <form id="registerForm">
+        <div>
+            <label for="name">Họ tên</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div>
+            <label>
+                <input type="checkbox" id="agree" name="agree" required> Tôi đồng ý điều khoản
+            </label>
+        </div>
+
+        <button type="submit">Đăng ký</button>
+    </form>
+
+    <p id="msg"></p>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

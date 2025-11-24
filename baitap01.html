@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+    </nav>
+
+    <h2>Bài tập 1 – Danh sách sản phẩm</h2>
+
+    <form onsubmit="searchProduct(); return false;">
+        <input id="search" type="text" placeholder="Nhập tên sản phẩm...">
+        <button type="submit">Tìm</button>
+    </form>
+
+    <p id="error" class="error"></p>
+
+    <div id="productList" class="product-container"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

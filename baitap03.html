@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+    </nav>
+
+    <main>
+        <h2>Countdown Timer – 10 phút</h2>
+
+        <div id="timer" class="timer">10:00</div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h3>Hết giờ!</h3>
+                <button id="closeBtn">OK</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Thêm event listener cho nút đóng modal
+        document.getElementById('closeBtn').addEventListener('click', closeModal);
+
+        // Hàm đóng modal
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Countdown timer 10 phút
+        let time = 10 * 60; // 10 phút tính theo giây
+        const timerEl = document.getElementById('timer');
+        const modalEl = document.getElementById('modal');
+
+        const countdown = setInterval(() => {
+            const minutes = Math.floor(time / 60);
+            const seconds = time % 60;
+            timerEl.textContent = `${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+            time--;
+
+            if (time < 0) {
+                clearInterval(countdown);
+                modalEl.style.display = 'block';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
